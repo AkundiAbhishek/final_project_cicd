@@ -19,18 +19,18 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.akundiabhishek }}
+          password: ${{ secrets.Abhi@1234# }}
 
       - name: Build and push backend
         run: |
-          docker build -t your-dockerhub-username/rgf-backend:latest ./research-journal-backends
-          docker push your-dockerhub-username/rgf-backend:latest
+          docker build -t akundiabhishek/rgf-backend:latest ./research-journal-backends
+          docker push akundiabhishek/rgf-backend:latest
 
       - name: Build and push frontend
         run: |
-          docker build -t your-dockerhub-username/rgf-frontend:latest ./research-journal-frontend
-          docker push your-dockerhub-username/rgf-frontend:latest
+          docker build -t akundiabhishek/rgf-frontend:latest ./research-journal-frontend
+          docker push akundiabhishek/rgf-frontend:latest
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
